@@ -3,7 +3,8 @@
     "allow": [
       "Bash(git -C \"E:/Desenvolvimento\" status)",
       "Bash(git -C \"E:/Desenvolvimento\" diff --staged)",
-      "Bash(git *)"
+      "Bash(git *)",
+      "Bash(gh auth *)"
     ]
   }
 }
