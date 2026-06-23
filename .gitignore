@@ -1,0 +1,19 @@
+# Local security outputs
+security/reports/
+security/private/
+*.security-report.txt
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Local dependencies and builds
+node_modules/
+dist/
+build/
+*.log
+

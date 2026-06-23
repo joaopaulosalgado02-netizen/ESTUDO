@@ -1,0 +1,28 @@
+name: Static site security check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  static-site-security:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Test static security scanner
+        run: bash security/tests/run-static-site-security-tests.sh
+
+      - name: Run static security checks
+        run: bash security/static-site-security-check.sh .
+
+      - name: Run npm audit when lockfile exists
+        if: hashFiles('package-lock.json') != ''
+        run: npm audit --audit-level=high
