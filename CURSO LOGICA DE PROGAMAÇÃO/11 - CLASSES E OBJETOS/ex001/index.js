@@ -1,19 +1,16 @@
-class formaDeBolo {
-    constructor(saborDaMassa, saborRecheio) {
-        this.saborDaMassa = saborDaMassa;
-        this.saborRecheio = saborRecheio;
+class Pedido {
+    constructor(cliente, produto) {
+        this.cliente = cliente;
+        this.produto = produto;
     }
 
     escrever() {
-        console.log(`O sabor da massa é de: ${this.saborDaMassa} 
-            de recheio de ${this.saborRecheio}`)
+        console.log(`O cliente ${this.cliente} comprou o produto ${this.produto}`)
     }
 }
 
-let boloFesta = new formaDeBolo("chocolate", 
-    "nutella");
-let boloPremium = new formaDeBolo("baunilha",
-    "morango");
+let pedidoMercado = new Pedido("Mariana", "arroz");
+let pedidoPapelaria = new Pedido("Carlos", "caderno");
 
-boloFesta.escrever();
-boloPremium.escrever();
+pedidoMercado.escrever();
+pedidoPapelaria.escrever();
