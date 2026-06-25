@@ -1,16 +1,19 @@
-// CLASSES E OBJETOS
+class formaDeBolo {
+    constructor(saborDaMassa, saborRecheio) {
+        this.saborDaMassa = saborDaMassa;
+        this.saborRecheio = saborRecheio;
+    }
 
-class Cliente {
-    nome;
-    idade;
-    email;
+    escrever() {
+        console.log(`O sabor da massa é de: ${this.saborDaMassa} 
+            de recheio de ${this.saborRecheio}`)
+    }
 }
 
-let cliente = new Cliente();
-cliente.nome = "Mariana";
-cliente.idade = 28;
-cliente.email = "mariana@email.com";
+let boloFesta = new formaDeBolo("chocolate", 
+    "nutella");
+let boloPremium = new formaDeBolo("baunilha",
+    "morango");
 
-console.log("Cliente: " + cliente.nome);
-console.log("Idade: " + cliente.idade);
-console.log("Email: " + cliente.email);
+boloFesta.escrever();
+boloPremium.escrever();
