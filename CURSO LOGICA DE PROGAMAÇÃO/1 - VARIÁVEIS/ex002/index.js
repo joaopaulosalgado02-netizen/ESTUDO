@@ -1,8 +1,8 @@
-//infos - pokemon - VARIAVEIS
-let nomePokemon = "Pikachu"
-let pokemonSexo = "M"
+//infos - aluno - VARIAVEIS
+let nomeAluno = "Carlos"
+let sexoAluno = "M"
 
-let nivelPokemon = 20
-let pontosDeVida = 45
+let idadeAluno = 20
+let notaAluno = 45
 
 let selecionavel = true

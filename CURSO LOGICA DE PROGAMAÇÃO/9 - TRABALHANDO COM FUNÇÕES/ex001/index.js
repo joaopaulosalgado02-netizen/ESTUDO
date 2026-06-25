@@ -1,11 +1,11 @@
-torrar()
+prepararCafe()
 
-function torrar(){
-    console.log("Torrando pão")
-    injetarPao()
+function prepararCafe(){
+    console.log("Preparando café")
+    servirCafe()
 }
 
-function injetarPao(){
-	console.log("Injetando pão")
+function servirCafe(){
+	console.log("Servindo café")
     console.log("Finalizado")
 }

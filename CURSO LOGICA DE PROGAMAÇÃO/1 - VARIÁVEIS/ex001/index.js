@@ -1,5 +1,5 @@
 //CONCEITO DE VARIAVEL + CONSOLE
-console.log(notificacao + " tem um forasteiro na região")
-console.log(notificacao + " voce foi derrotado por um forasteiro")
+console.log(notificacao + " sua entrega saiu para entrega")
+console.log(notificacao + " seu pedido foi entregue")
 
-const notificacao = "Elden ring diz:" 
+const notificacao = "Aplicativo diz:" 

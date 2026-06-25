@@ -1,40 +1,40 @@
-function calcularRank(vitorias, derrotas){
-    let saldoVitorias = vitorias - derrotas;
-    rank
+function calcularNivel(atividadesConcluidas, atividadesPendentes){
+    let saldoAtividades = atividadesConcluidas - atividadesPendentes;
+    nivel
 
 
-    if (vitorias <= 10) {
-        console.log("Ferro");
-        rank = "Ferro";
-    } else if (vitorias >= 11 && vitorias <= 20) {
-        console.log("Bronze");
-        rank = "Bronze";
-    } else if (vitorias >= 21 && vitorias <= 50) {
-        console.log("Prata");
-        rank = "Prata";
-    } else if (vitorias >= 51 && vitorias <= 80) {
-        console.log("Ouro");
-        rank = "Ouro";
-    } else if (vitorias >= 81 && vitorias <= 90) {
-        console.log("Diamante");
-        rank = "Diamante";
-    } else if (vitorias >= 91 && vitorias <= 100) {
-        console.log("Lendário");
-        rank = "Lendário";
-    } else if (vitorias >= 101) {
-        console.log("Imortal");
-        rank = "Imortal";
+    if (atividadesConcluidas <= 10) {
+        console.log("Iniciante");
+        nivel = "Iniciante";
+    } else if (atividadesConcluidas >= 11 && atividadesConcluidas <= 20) {
+        console.log("Básico");
+        nivel = "Básico";
+    } else if (atividadesConcluidas >= 21 && atividadesConcluidas <= 50) {
+        console.log("Intermediário");
+        nivel = "Intermediário";
+    } else if (atividadesConcluidas >= 51 && atividadesConcluidas <= 80) {
+        console.log("Avançado");
+        nivel = "Avançado";
+    } else if (atividadesConcluidas >= 81 && atividadesConcluidas <= 90) {
+        console.log("Destaque");
+        nivel = "Destaque";
+    } else if (atividadesConcluidas >= 91 && atividadesConcluidas <= 100) {
+        console.log("Referência");
+        nivel = "Referência";
+    } else if (atividadesConcluidas >= 101) {
+        console.log("Especialista");
+        nivel = "Especialista";
     }
 
-    return { saldoVitorias, rank}
+    return { saldoAtividades, nivel}
 
 }
 
-let vitorias = 70
-let derrotas = 22
-let rank = ""
+let atividadesConcluidas = 70
+let atividadesPendentes = 22
+let nivel = ""
 
-let resultado = calcularRank(vitorias, derrotas)
+let resultado = calcularNivel(atividadesConcluidas, atividadesPendentes)
 
 
-console.log("O héroi tem de " + vitorias + " está no nivel de " + rank);
+console.log("A pessoa concluiu " + atividadesConcluidas + " atividades e está no nivel de " + nivel);

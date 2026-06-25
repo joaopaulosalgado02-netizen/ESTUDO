@@ -1,36 +1,36 @@
-let nomeHeroi = "Meliodas";
-let xpHeroi = 10000;
-let rankHeroi; ""
+let nomeAluno = "Mariana";
+let pontosAluno = 10000;
+let nivelAluno; ""
 
-if (xpHeroi <= 1000) {
-    console.log("Ferro");
-    rankHeroi = "Ferro";
-} else if (xpHeroi >= 1001 && xpHeroi <= 2000) {
-    console.log("Bronze");
-    rankHeroi = "Bronze";
-} else if (xpHeroi >= 2001 && xpHeroi <= 5000) {
-    console.log("Prata");
-    rankHeroi = "Prata";
-} else if (xpHeroi >= 5001 && xpHeroi <= 7000) {
-    console.log("Ouro");
-    rankHeroi = "Ouro";
-} else if (xpHeroi >= 7001 && xpHeroi <= 8000) {
-    console.log("Platina");
-    rankHeroi = "Platina";
-} else if (xpHeroi >= 8001 && xpHeroi <= 9000) {
-    console.log("Ascendente");
-    rankHeroi = "Ascendente";
-} else if (xpHeroi >= 9001 && xpHeroi <= 10000) {
-    console.log("Imortal");
-    rankHeroi = "Imortal";
+if (pontosAluno <= 1000) {
+    console.log("Iniciante");
+    nivelAluno = "Iniciante";
+} else if (pontosAluno >= 1001 && pontosAluno <= 2000) {
+    console.log("Básico");
+    nivelAluno = "Básico";
+} else if (pontosAluno >= 2001 && pontosAluno <= 5000) {
+    console.log("Intermediário");
+    nivelAluno = "Intermediário";
+} else if (pontosAluno >= 5001 && pontosAluno <= 7000) {
+    console.log("Avançado");
+    nivelAluno = "Avançado";
+} else if (pontosAluno >= 7001 && pontosAluno <= 8000) {
+    console.log("Destaque");
+    nivelAluno = "Destaque";
+} else if (pontosAluno >= 8001 && pontosAluno <= 9000) {
+    console.log("Monitor");
+    nivelAluno = "Monitor";
+} else if (pontosAluno >= 9001 && pontosAluno <= 10000) {
+    console.log("Referência");
+    nivelAluno = "Referência";
 } else {
-	rankHeroi = "Radiante";
-    console.log("Radiante");
-    console.log("O herói " + nomeHeroi + " é um verdadeiro " + rankHeroi + " com " + xpHeroi + " de XP!");
+	nivelAluno = "Especialista";
+    console.log("Especialista");
+    console.log("O aluno " + nomeAluno + " é um " + nivelAluno + " com " + pontosAluno + " pontos!");
     
 }
 
-console.log("O herói de nome " + nomeHeroi + " está no nivel de " + rankHeroi);
+console.log("O aluno de nome " + nomeAluno + " está no nivel de " + nivelAluno);
 
 // EXEMPLO FUNCIONÁRIO
 
@@ -66,4 +66,3 @@ if (pontosFuncionario <= 1000) {
 }
 
 console.log("O funcionário de nome " + nomeFuncionario + " está no nível de " + nivelFuncionario);
-
