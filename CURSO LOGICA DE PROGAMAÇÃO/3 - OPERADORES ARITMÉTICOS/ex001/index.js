@@ -1,16 +1,22 @@
 // OPERADORES ARITMÉTICOS
 
+{
 let idade = 30
 
 console.log("o valor da minha variavel é " + idade)
+}
 
+{
 let idade = 30 + 6
 
 console.log("o valor da minha variavel é " + idade)
+}
 
+{
 let idade = 30 - 6
 
 console.log("o valor da minha variavel é " + idade)
+}
 
 // EXEMPLO REAL
 
