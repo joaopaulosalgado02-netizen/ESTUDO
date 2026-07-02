@@ -38,9 +38,11 @@ Este repositório serve como:
 
 Além da Formação Java Developer, pretendo estudar futuramente:
 
-* Formação SQL
+* Formação SQL Database Specialist
 * API
-* Formação Design UX
+* Formação TypeScript Fullstack Developer
+* Formação React Developer
+* Formação UI/UX Designer
 
 ---
 
