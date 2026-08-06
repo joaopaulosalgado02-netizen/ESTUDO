@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const MyApp());
+}
+
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -19,15 +19,16 @@ class _MyAppState extends State<MyApp> {
       home: SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Exemplo de AppBar'),
+            title: const Text('Exemplo de AppBar'),
             backgroundColor: Colors.purple,
           ),
-          
           floatingActionButton: FloatingActionButton(
             onPressed: () {},
             backgroundColor: Colors.purple,
-            child: Icon(Icons.add, size: 30,
-            ) 
+            child: const Icon(
+              Icons.add,
+              size: 30,
+            ),
           ),
         ),
       ),
