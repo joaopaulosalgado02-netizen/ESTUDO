@@ -1,0 +1,58 @@
+/* The reader has the same measured geometry before and after the hinge.
+   No layout swap is allowed underneath the moving cover. */
+.album-app { height:100dvh; min-height:100dvh; --reader-top:77px; --reader-bottom:54px; }
+.app-header { flex-shrink:0; }
+.app-footer { flex-shrink:0; height:54px; min-height:54px; padding:0 20px; }
+.cover-stage { min-height:0; }
+.reading-room { position:absolute; top:var(--reader-top); bottom:var(--reader-bottom); left:0; right:0; }
+.book-topline,.book-navigation,.reading-progress { flex-shrink:0; }
+.with-music { --reader-bottom:202px; }
+.music-dock { position:absolute; left:0; right:0; bottom:54px; }
+.with-music .app-footer { min-height:54px; }
+.book-is-closed .cover-stage,.is-closing-book .reading-room { animation:none; }
+.opening .book-cover { transform:none; filter:none; }
+.opening .closed-book { transform:rotate(-5deg); }
+.opening .book-cover:disabled { opacity:1; }
+.is-preparing-open .reading-room { opacity:0; pointer-events:none; }
+.is-moving-book .reading-room { visibility:hidden; pointer-events:none; }
+.is-moving-book .cover-stage .closed-book,.is-closing-book .cover-stage .closed-book { visibility:hidden; }
+.cover-stage>:is(.table-keepsake,.table-envelope,.candle,.dried-flower,.cover-invitation) { transition:opacity 650ms ease; }
+.is-preparing-open.is-moving-book .cover-stage>:is(.table-keepsake,.table-envelope,.candle,.dried-flower,.cover-invitation),
+.is-closing-book .cover-stage>:is(.table-keepsake,.table-envelope,.candle,.dried-flower,.cover-invitation) { opacity:0; animation:none; pointer-events:none; }
+.is-closing-book.is-moving-book .cover-stage>:is(.table-keepsake,.table-envelope,.candle,.dried-flower,.cover-invitation) { animation:table-return 750ms 1550ms ease both; }
+.is-moving-book .app-header,.is-moving-book .app-footer { pointer-events:none; }
+.is-moving-book .cover-stage .book-cover { transform:none; }
+.book-is-open:not(.is-closing-book) :is(.book-topline,.book-navigation,.reading-progress) { animation:reader-controls 380ms ease both; }
+@keyframes table-return { from { opacity:0; } to { opacity:1; } }
+@keyframes reader-controls { from { opacity:0; transform:translateY(5px); } to { transform:translateY(0); } }
+
+/* A backdrop can fade; the physical book and its page deck remain opaque. */
+.book-atmosphere { position:fixed; inset:0; pointer-events:none; z-index:0; background:radial-gradient(ellipse at 48% 40%,#6a2d43,#391524 70%,#260f1a),#391524; opacity:0; transition:opacity 1250ms cubic-bezier(.25,.55,.3,1); }
+.book-is-open .book-atmosphere,.is-preparing-open.is-moving-book .book-atmosphere { opacity:1; }
+.is-closing-book.is-moving-book .book-atmosphere { opacity:0; }
+.reading-room,.app-header,.app-footer,.music-dock { z-index:2; }
+.album-app.book-is-open { background:radial-gradient(ellipse at 84% 33%,#d3954838,transparent 49%),radial-gradient(ellipse at 50% 42%,#ffffff05,#1e110dc4 90%),repeating-linear-gradient(2deg,transparent 0 3px,#110d0a0e 4px 5px),repeating-linear-gradient(90deg,#67462f 0 15%,#573b29 15.2% 15.6%,#725037 15.8% 36%,#3b271d 36.2% 36.5%,#66462f 36.8% 59%); }
+.book-mechanism { position:fixed; inset:0; z-index:20; perspective:1400px; perspective-origin:50% 45%; pointer-events:none; visibility:hidden; }
+.book-mechanism[data-ready="true"] { visibility:visible; }
+.mechanical-shell { position:absolute; transform-style:preserve-3d; }
+.mechanical-page-deck { position:absolute; inset:0; background:#f0e3cc; border-radius:3px; box-shadow:0 23px 38px #14071066,3px 5px 0 #c4b08e,6px 8px 0 #712b43; }
+.mechanical-page-deck>.book-spread { width:100%; height:100%; }
+.mechanical-cover { position:absolute; top:0; height:100%; transform-origin:0 50%; transform-style:preserve-3d; will-change:transform; }
+.mechanical-cover-front,.mechanical-cover-back { position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; }
+.mechanical-cover-front { transform:translateZ(2px); border-radius:4px 9px 9px 4px; box-shadow:4px 4px 2px #351420; }
+.mechanical-cover-content { position:absolute; top:0; left:0; transform-origin:0 0; }
+.mechanical-cover-content>.book-cover { width:100%; height:100%; transform:none!important; filter:none!important; opacity:1!important; }
+.mechanical-cover-back { transform:rotateY(180deg) translateZ(1px); background:linear-gradient(90deg,#e0cba7,#f3e5cd 10%,#f5e9d3 90%,#c8b28e); border-radius:3px; border:1px solid #a98c6666; box-shadow:inset -10px 0 17px -10px #49322066; overflow:hidden; }
+.mechanical-cover-back>.book-page { width:100%; height:100%; border:0; }
+.spread .mechanical-cover-back { border:0; }
+.mechanical-cover-back:empty::after { content:'J & J'; position:absolute; top:47%; width:100%; text-align:center; font:italic 28px var(--serif); color:#97764b66; }
+.mechanical-page-shade { position:absolute; inset:0; background:linear-gradient(90deg,#29142155,#29142111 45%,#29142166); pointer-events:none; }
+@media(max-width:1049px) { .album-app { --reader-top:68px; --reader-bottom:46px; }.app-footer{height:46px;min-height:46px}.music-dock{bottom:46px}.with-music{--reader-bottom:194px}.with-music .app-footer{min-height:46px} }
+@media(max-width:600px) { .album-app{--reader-top:61px;--reader-bottom:44px}.app-footer{height:44px;min-height:44px}.music-dock{bottom:44px}.with-music{--reader-bottom:192px}.with-music .app-footer{min-height:44px} }
+@media(max-height:610px) and (max-width:600px) { .album-app{--reader-top:52px} }
+html[data-motion="reduced"] { .book-atmosphere { transition:none; }.book-is-open:not(.is-closing-book) :is(.book-topline,.book-navigation,.reading-progress) { animation:none; } }
+.motion-control { display:flex; gap:6px; align-items:center; min-height:44px; padding:0 5px; font:8px/1.4 Arial,sans-serif; color:#d9c19b; text-align:left; }
+.motion-control>span:first-child { font:18px var(--serif); width:15px; text-align:center; }
+.motion-control small { display:block; font-size:7px; opacity:.65; letter-spacing:.3px; }
+.motion-active>span:first-child { color:#ecd49a; }
+@media(max-width:600px) { .header-actions { gap:6px; }.motion-control { gap:4px;font-size:7px;padding:0; }.motion-control small { font-size:6px; }.motion-control>span:first-child { font-size:16px;width:13px; } }

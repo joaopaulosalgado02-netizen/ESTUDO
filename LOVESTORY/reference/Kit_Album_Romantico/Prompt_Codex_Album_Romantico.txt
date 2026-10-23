@@ -1,0 +1,301 @@
+CONSTRUA UM ÁLBUM ROMÂNTICO INTERATIVO COM AS NOSSAS FOTOS E VÍDEOS
+
+ATUALIZAÇÃO DO MATERIAL PESSOAL
+O lote atual contém 18 fotos e 2 vídeos. Leia MEMORIAS_RECEBIDAS.md e media-manifest.json antes de implementar a narrativa. Datas esclarecidas pelo usuário: primeiro encontro em 28 de agosto; primeiro beijo em 19 de setembro, bem cedo; primeiro dia de máscara facial em 10 de outubro, incluindo a foto F13 e os dois vídeos. O manifesto distingue essas datas das associações de arquivo ainda provisórias.
+Nomes confirmados: Jemima e João. Ela é Jemima, apelidada de Mima; ele é João. Usar “Jemima e João” na capa e “Mima” nas mensagens pessoais quando combinar. Música escolhida: “Totalmente Seu”; artista/versão e arquivo de áudio ainda pendentes. O usuário escolheu contar desde o primeiro encontro, em 28 de agosto. Legenda do contador: “Desde o nosso primeiro encontro”. O início do namoro, a carta e as demais preferências ainda não foram informados; não chamar o encontro de início do namoro.
+Para exibir as mídias, prefira webFile no manifesto. Alguns arquivos recebidos têm extensão HEIC/WebP, porém seus bytes são JPEG; o pacote oferece aliases .jpg com os mesmos bytes, preservando também os arquivos recebidos.
+As fotos espontâneas da roça, do Bibo e dos pequenos cuidados são parte da história. Não excluir esses registros apenas por não serem fotos posadas.
+
+Quero que você implemente o projeto e o confira no navegador. Leia este briefing inteiro, examine os arquivos fornecidos e siga o estilo do livro de referência. A entrega deve funcionar de verdade, com as nossas imagens e as interações descritas abaixo. Não termine apenas com um planejamento.
+
+1. REFERÊNCIAS E GRAU DE FIDELIDADE
+
+TikTok enviado como referência:
+https://vt.tiktok.com/ZSg5kQ6PS/
+
+Demonstração pública do criador do vídeo, inspecionada para este briefing:
+https://lovepanda.com.br/presente/edu-ana-43e26386
+
+Página oficial que apresenta os dois formatos:
+https://lovepanda.com.br/
+
+O formato que quero é o ÁLBUM QUE SE FOLHEIA. A referência tem uma capa com aparência de livro físico e, dentro, cenas ilustradas que respondem ao toque. Cada página é uma pequena experiência: abrir uma carta, virar uma fotografia, tirar um bilhete de um pote, revelar uma lembrança.
+
+Limite da análise anterior: o TikTok reproduziu atrás de uma tela de acesso, impedindo conferir o vídeo inteiro sem obstrução. Foi possível identificar o criador, observar trechos e navegar pelas 34 páginas da demonstração pública atual. O trecho do TikTok exibia um contador de 30 páginas. Portanto, o roteiro de 30 páginas deste briefing é uma adaptação fundamentada no mesmo tipo de álbum; não é uma transcrição quadro a quadro do vídeo.
+
+Se conseguir abrir a referência, confira principalmente capa, textura dos materiais, iluminação, proporções do livro, navegação e interações. Se não conseguir, continue usando as especificações abaixo e registre essa limitação. Nunca diga que assistiu ou comparou algo que não conseguiu acessar.
+
+Quero proximidade na experiência, no cuidado visual e no funcionamento. Crie as próprias ilustrações, composições e textos para a nossa versão. Use as nossas mídias. Os nomes, fotos e histórias de Edu e Ana pertencem à demonstração e não devem aparecer na entrega.
+
+2. O QUE ESTAMOS FAZENDO
+
+Um presente pessoal para ser aberto principalmente pelo celular. A pessoa recebe um link, vê um livro preparado para ela, toca para abrir e percorre nossas lembranças com calma. Deve parecer um álbum ilustrado feito para nós, com detalhes que dão vontade de tocar.
+
+A composição começa numa mesa de madeira, com luz quente, o livro fechado e poucos objetos de cena. Ao abrir, o livro ocupa o centro da tela, sobre um tecido vinho. O conteúdo combina fotografias reais, papel, pequenos objetos ilustrados, movimento e mensagens curtas.
+
+Evite linguagem comercial, menus de empresa, preços, planos e cadastro. Não use a estrutura de landing page com vários blocos de vendas. O conteúdo principal é o livro, e as ações acontecem dentro dele.
+
+3. NOSSAS MÍDIAS E O QUE SABEMOS SOBRE ELAS
+
+O pacote contém 18 fotografias e 2 vídeos, totalizando 20 mídias distintas. Os originais estão em media/. Consulte também media-manifest.json.
+
+ARQUIVO: media/1000554942.jpg
+Identificação: nós dois mostrando a língua, fotografados de baixo para cima.
+Fato informado por mim: esse foi o primeiro dia em que nos conhecemos.
+Papel na narrativa: PRIMEIRO ENCONTRO / O DIA EM QUE A GENTE SE CONHECEU.
+Data confirmada pelo usuário: 28 de agosto. O ano 2026 é adotado pelo contexto temporal da conversa.
+
+ARQUIVO: media/1000554931.jpg
+Identificação: selfie dos dois no carro, imagem horizontal, com os cintos visíveis.
+Fato informado por mim: esse registro está associado ao nosso primeiro beijo.
+Papel na narrativa: PRIMEIRO BEIJO.
+A fotografia não precisa mostrar o beijo acontecendo para representar essa memória. Preserve a associação que eu expliquei; não invente uma fotografia de beijo.
+Data confirmada pelo usuário: 19 de setembro, bem cedo. A ida à Central/igreja aconteceu à noite nesse mesmo dia. O ano 2026 é adotado pelo contexto da conversa.
+
+ARQUIVO: media/1000566190.jpg
+Identificação: selfie horizontal em luz dourada; ela faz biquinho e ele mostra a língua.
+Uso sugerido: lembrança em destaque numa composição horizontal ou fotografia sobre a mesa.
+
+ARQUIVO: media/1000564083.jpg
+Identificação: selfie vertical, ela com óculos e os dois próximos.
+Uso sugerido: foto principal da capa, se o enquadramento preservar os dois rostos.
+
+ARQUIVO: media/1000564082.jpg
+Identificação: selfie com ela mostrando a língua, gravada de lado no arquivo vertical.
+O arquivo não tem orientação EXIF. Confira visualmente e apresente-o na orientação correta. A indicação inicial do manifesto é rotação visual de -90 graus, no sentido anti-horário em CSS, resultando em uma imagem horizontal. Ajuste a caixa à proporção final, sem cortar a fotografia por causa da rotação.
+
+ARQUIVO: media/1000564064.jpg
+Identificação: foto vertical com filtro de orelhas e focinho, camiseta branca com aranha vermelha.
+Uso sugerido: cabine de fotos e momentos divertidos.
+
+ARQUIVO: media/1000564057.jpg
+Identificação: selfie vertical abraçados, com tonalidade arroxeada.
+Uso sugerido: galeria, moldura ou medalhão.
+
+ARQUIVO: media/1000564052.jpg
+Identificação: selfie vertical fazendo caretas; ela com o dedo perto do nariz. Há marca do TikTok na imagem.
+Uso sugerido: galeria de momentos leves. Preserve o arquivo e o aspecto da foto.
+
+ARQUIVO: media/1000567511.mp4
+Vídeo vertical, 576 x 1024, aproximadamente 15,16 segundos, com faixa de áudio.
+Mostra os dois com máscaras faciais escuras e filtros, brincando para a câmera. Data confirmada do evento: 10 de outubro, a primeira vez que fizeram máscara facial juntos.
+
+ARQUIVO: media/1000567513.mp4
+Vídeo vertical, 576 x 1024, aproximadamente 20,97 segundos, com faixa de áudio.
+Outro registro dos dois com máscaras faciais escuras, poses e caretas. Mesmo evento de 10 de outubro, junto da foto F13 e do outro vídeo.
+
+Use as dezoito fotos ao longo do livro e disponibilize os dois vídeos completos. É aceitável repetir uma foto em objetos diferentes, mas evite repetir a mesma composição de página.
+
+Consulte a atualização de lembranças e os campos date e reportedDate de media-manifest.json. O primeiro encontro foi em 28 de agosto, o primeiro beijo em 19 de setembro e o dia das máscaras em 10 de outubro. A ordem desses marcos está esclarecida. As associações de algumas fotos da roça continuam provisórias. Os arquivos recebidos não têm datas de captura EXIF; números dos arquivos e roupas não estabelecem datas.
+
+Use os novos acontecimentos relatados: igreja, presente Bibo/Bibble, pequenos cuidados, primeira máscara facial e dias na roça do pai dela. Mostre datas apenas quando conferidas; mantenha sem data as associações pendentes. Não invente outros acontecimentos.
+
+4. DADOS EDITÁVEIS SEM BLOQUEAR A IMPLEMENTAÇÃO
+
+Centralize os dados pessoais e textos num arquivo tipado, como src/content/album.ts. Use campos separados para nomes, data do primeiro encontro, data do primeiro beijo, início do namoro, cidade, música, carta, motivos e planos futuros.
+
+Deixe os dados ainda desconhecidos como null ou strings vazias. Enquanto não houver nomes, use “Nós dois” e títulos que funcionem sem nome. Não mostre colchetes, “NOME DELA”, “Lorem ipsum”, dados do casal da demonstração ou avisos técnicos dentro do presente.
+
+O contador foi escolhido explicitamente para começar no primeiro encontro: 28 de agosto, adotando 2026 pelo contexto da conversa. Usar a legenda “Desde o nosso primeiro encontro”. A data de início do namoro é um campo independente e continua vazia. Calcular anos, meses e dias como calendário em America/Sao_Paulo. O horário do encontro não foi informado: não inventar uma hora; horas, minutos e segundos de tempo decorrido só devem aparecer se um horário real for preenchido. Evitar interpretar a data sem horário como UTC e fazê-la cair no dia anterior no Brasil.
+
+Textos afetivos novos devem ser rascunhos curtos e editáveis, sem alegações específicas sobre a nossa vida. O README deve indicar claramente onde eu personalizo esses textos. Não pare toda a construção para perguntar nomes, datas e música; implemente os estados de ausência desses dados.
+
+5. DIREÇÃO DE ARTE
+
+Paleta proposta para a nossa versão, sujeita a ajustes visuais: vinho profundo #641E36; vinho escuro #30121F; papel creme #F3E5CD; dourado envelhecido #C8A56A; madeira #744928; azul noturno #151B34; rosa suave #D1A3AD.
+
+O livro precisa ter espessura aparente, lombada, cantos discretos, sombra de contato e sensação de papel. Na capa, use textura de tecido ou couro e desenhos próprios em traço fino de cor dourada ou creme. Reserve uma área para a nossa foto e outra para o título. Os ornamentos devem apoiar a composição, sem cobrir nossos rostos.
+
+Na entrada, componha a mesa com envelope, uma fotografia parcialmente sob o livro e uma pequena fonte de luz quente. Use profundidade, sombras coerentes e vinheta moderada. Ao abrir, reduza os objetos externos para a leitura ficar confortável.
+
+Use uma família serifada elegante nos títulos, uma fonte legível nos textos e uma manuscrita apenas para bilhetes ou legendas breves. Sugestões, caso estejam disponíveis e licenciadas: Cormorant Garamond, uma sans simples para controles e Caveat para anotações. Inclua alternativas locais. Não dependa de fonte externa para a página funcionar.
+
+As cenas internas devem parecer ilustrações de um mesmo livro: materiais semelhantes, perspectiva coerente, luz suave, objetos com volume e áreas de descanso para o texto. Não transforme todas as páginas em cartões iguais. Uma página pode ser uma mesa com envelope; outra, uma cabine; outra, uma janela noturna.
+
+Se houver ferramenta de geração de imagens, crie cenários e objetos originais de uma mesma família visual. Separe fundo, objeto e frente quando precisarem de movimento independente. Não coloque nossos rostos em imagens geradas. As fotos devem continuar sendo as fotografias reais fornecidas.
+
+Se trabalhar com SVG e CSS, desenhe os objetos com detalhe suficiente para sustentar esse aspecto ilustrado. Um emoji gigante ou um ícone simples não substitui uma cabine, um pote ou uma caixinha de música. As áreas de interação devem coincidir com os objetos visíveis.
+
+Mantenha texto real em HTML sobre os cenários. Não grave títulos e parágrafos numa imagem: preciso poder editá-los e lê-los em qualquer tamanho de tela.
+
+6. ABERTURA, LIVRO E NAVEGAÇÃO
+
+Estado inicial: livro fechado sobre a mesa. Título breve, como “Guardei um pouco de nós aqui”, seguido de uma ação clara para abrir. Esse texto é uma sugestão para nossa versão.
+
+Ao tocar em abrir, aproxime o livro, acomode a cena e abra a capa com origem de transformação na lombada. Evite cortar diretamente para uma grade de imagens. Prepare somente os recursos necessários à abertura e às primeiras páginas; deixe o restante carregar de forma progressiva.
+
+No celular: uma página por vez, com texto confortável e controles ao alcance do polegar. No computador: duas páginas lado a lado quando houver largura suficiente. Não reduza uma dupla inteira até a letra ficar minúscula no celular.
+
+Mostre discretamente o título da seção e a numeração. Tenha anterior, próximo e acesso ao sumário. Permita toque, teclado e gesto horizontal fora de áreas que já usam arraste. Arrastar uma peça, assinar, raspar ou controlar um vídeo não pode virar a página por acidente.
+
+A virada deve simular uma folha: pivô na lombada, frente e verso consistentes, sombra que se move, conteúdo de baixo aparecendo e pausa entre comandos repetidos. Sugestão inicial de duração: 650 a 900 ms, ajustada após conferir no navegador. Não use somente um fade para a navegação normal. No modo de movimento reduzido, ofereça troca simples e rápida.
+
+A capa e o encerramento externo não entram na contagem das 30 páginas internas. A numeração deve vir da lista de páginas habilitadas, sem totais inconsistentes.
+
+7. ROTEIRO DAS 30 PÁGINAS INTERNAS
+
+Este roteiro preserva os principais tipos de cena observados e adapta o conteúdo para as nossas mídias. Construa cada página com composição e interação próprias.
+
+01 — DEDICATÓRIA
+Folha de guarda com ornamentação discreta, título do nosso álbum e os nomes Jemima e João. A imagem principal pode aparecer como uma fotografia encaixada. A ação principal é começar a folhear. Não invente uma data de início.
+
+02 — SUMÁRIO
+Folha de papel creme, itens bem distribuídos e pequenas marcas de capítulo. Cada item leva à página correta. Destaque “Nosso começo”, “Nossas fotos”, “Os vídeos” e “Uma carta”. Evite uma lista de 30 links minúsculos: agrupe os capítulos mantendo todos acessíveis.
+
+03 — O NOSSO TEMPO
+Composição ilustrada de relógio ou mostrador de mesa. Exibir o tempo desde o primeiro encontro em 28 de agosto, com a legenda “Desde o nosso primeiro encontro”. Usar anos, meses e dias calculados por calendário, em America/Sao_Paulo. Como não foi informado o horário, não apresentar horas, minutos e segundos como duração exata desde o encontro. O relógio ilustrado pode ter movimento decorativo. Nunca exibir NaN, números negativos ou chamar esse período de tempo de namoro.
+
+04 — UMA CARTA GUARDADA
+Envelope sobre uma mesa, selo de cera e papel com textura. Toque no selo: ele se desprende, a aba abre e a carta sobe. A carta deve ser legível, com rolagem própria se necessário. Permitir fechar e abrir de novo. Ao sair da página, não deixar camadas da carta sobre as páginas seguintes.
+
+05 — UM CÉU PARA NÓS
+Cena noturna com estrelas e uma moldura delicada. Por padrão, céu decorativo, sem afirmar que reproduz a posição real de estrelas de uma data. Só implementar mapa astronômico histórico se data, hora, lugar e cálculo apropriado estiverem disponíveis. Toque pode disparar uma estrela cadente discreta. A ausência de dados deve resultar numa página bonita, sem formulários no meio do presente.
+
+06 — RETRATO SOB A LUA
+Lua ilustrada e medalhão com uma das nossas fotos. Ao tocar ou puxar o medalhão, ele balança e revela a imagem maior ou uma pequena mensagem. Lua decorativa por padrão; não mostrar uma fase histórica calculada a partir de data desconhecida. Oferecer um botão equivalente ao gesto.
+
+07 — UMA FLOR PARA VOCÊ
+Rosa ilustrada com pétalas em camadas e um bilhete pequeno. Ao tocar, a flor se abre e revela uma frase breve. O acabamento deve lembrar o restante do livro, com volume e luz, sem usar emoji como flor principal.
+
+08 — O QUE A GENTE CULTIVA
+Pequeno jardim ilustrado, com três mudas e um regador. Cada toque numa muda rega e faz a planta crescer até florescer. A sequência precisa ter estados visíveis e um fim. Salvar esse progresso apenas neste navegador e permitir refazer.
+
+09 — A NOTÍCIA DO NOSSO COMEÇO
+Jornal dobrado com uma manchete original sobre o dia em que nos conhecemos. Use a foto 1000554942.jpg. Ao tocar, o jornal se desdobra. O texto deve se limitar ao fato confirmado, sem lugar, data ou diálogo fictício. Exemplo de manchete editável: “O dia em que a gente se conheceu”.
+
+10 — DUAS LEMBRANÇAS DO COMEÇO
+Mural com dois registros principais: 1000554942.jpg representa o primeiro encontro e 1000554931.jpg representa o primeiro beijo. Indique a ordem por títulos, sem atribuir dias diferentes. Toque na foto para virar e ler a legenda; toque novamente para voltar. Disponibilize ampliação sem cortar rostos. Não descreva a foto do carro como se ela mostrasse o beijo acontecendo.
+
+11 — NOSSAS FOTOGRAFIAS
+Mesa ou painel com cartões fotográficos. Use parte das demais fotos, com pequenas variações de ângulo e sombra. Cada cartão revela a foto e uma legenda curta. A seleção deve funcionar por toque e teclado. A galeria ampliada permite percorrer as dezoito fotos e mostra o arquivo na orientação correta.
+
+12 — CABINE DE FOTOS
+Cabine ilustrada com moldura, pequenas lâmpadas e uma tira de quatro fotografias. Ao tocar no botão, as luzes acendem, ocorre um flash breve e a tira desliza para fora. Use fotos existentes; não solicite câmera nem gere novos rostos. Se houver uma segunda tira, distribua as fotos restantes. Ofereça visualização em tamanho maior.
+
+13 — UM VERBETE NOSSO
+Livro menor aberto sobre uma mesa, com uma definição afetiva original e fotos pequenas nas margens. Uma lupa pode ampliar detalhes do papel, com alternativa de botão para abrir o texto. O texto é um rascunho editável, não uma citação de dicionário real e nem uma cópia da demonstração.
+
+14 — A NOSSA HISTÓRIA, ATÉ AQUI
+Varal ou sequência de fotografias iluminadas. Use os marcos e os arquivos ligados a eles no manifesto: encontro, primeiro beijo, igreja, cuidados, presente e dias na roça. A sequência inicial está esclarecida: encontro em agosto, beijo e igreja em setembro, máscaras e registros da roça em outubro. Omita datas ainda pendentes e mantenha as associações provisórias fora de uma ordenação afirmada como definitiva.
+
+15 — UMA IDEIA PARA NÓS DOIS
+Roda-gigante ilustrada ou roda de encontros, integrada a um cenário noturno. Toque em girar, anime com desaceleração e destaque uma sugestão. As sugestões são ideias futuras editáveis, não lembranças de coisas já feitas. Use opções simples de rascunho, como ver um filme ou fazer um lanche juntos. Não exigir arrastar para conseguir jogar.
+
+16 — LUZES COM AS NOSSAS FOTOS
+Lanternas de papel em um céu ilustrado. Cada toque acende uma lanterna e revela uma fotografia real do casal. Selecione até oito fotografias do conjunto para as lanternas; as demais ficam disponíveis na galeria. Mostre o progresso e permita rever cada foto. Não criar espaços falsos pedindo mais fotografias.
+
+17 — BILHETES NO POTE
+Pote de vidro com papelzinhos coloridos, rolha e reflexos. Toque na rolha ou no pote: a rolha sobe, os papéis se movem e um bilhete sai até uma área legível. Depois, o próximo toque revela outro bilhete sem repetir antes de percorrer a lista. Use uma lista editável de rascunhos afetivos curtos. O total exibido deve corresponder à lista real.
+
+18 — CAIXINHA DE MÚSICA
+Caixa de madeira com tampa, manivela, engrenagem decorativa e nossa foto na parte interna. Girar ou tocar a manivela abre a tampa e movimenta o mecanismo. A música escolhida é “Totalmente Seu”; artista/versão e arquivo ainda precisam ser identificados. Quando a faixa correta estiver disponível, ela pode tocar após esse gesto. Não substituir por uma gravação aleatória de mesmo título. Sem arquivo de música, a caixa continua visualmente interativa, sem fingir que está tocando uma música inexistente.
+
+19 — CARTAS PARA OUTRAS HORAS
+Seis envelopes com situações como saudade, vontade de sorrir ou lembrar do começo. Ao tocar, abrir a carta correspondente. Mostrar quais já foram lidas, salvando isso localmente. Os textos são rascunhos breves e editáveis; não inventar problemas do relacionamento. Fechar devolve a cena ao estado anterior sem perder a navegação.
+
+20 — UMA FOTO, PEÇA POR PEÇA
+Quebra-cabeça com uma foto nossa, moldura e peças suficientemente grandes para os dedos. Pode usar 3 x 3 peças. Arraste com encaixe ou toque numa peça e depois na posição. Ofereça “Ver foto” e “Completar para mim” para quem só quiser conhecer a lembrança. Ao concluir, mostrar a fotografia inteira, sem deformação.
+
+21 — UM BILHETE ESCONDIDO
+Raspadinha ilustrada com cobertura metálica e um recado afetivo ou vale simbólico editável. Raspar deve revelar progressivamente o conteúdo real. Incluir “Revelar” como alternativa acessível. Não basta um botão com desenho de moeda sobre uma frase que já estava visível.
+
+22 — NOSSOS PEQUENOS VÍDEOS
+Adaptação necessária para o nosso material: uma cena de pequeno cinema, com projetor ou tela enquadrada, dois ingressos e miniaturas dos dois vídeos reais. Toque no ingresso ou miniatura abre o vídeo correspondente num player confortável. Reproduzir 1000567511.mp4 e 1000567513.mp4 completos, na vertical, sem cortar os rostos. Controles, áudio opcional e tela cheia devem funcionar. Se houver trilha de fundo, pause-a enquanto o vídeo toca. Ao fechar o player ou sair da página, pause o vídeo. Retomar a trilha somente se ela já estava tocando antes.
+
+23 — LEMBRANÇAS À LUZ DA LANTERNA
+Cena escurecida com fotografias e pequenos bilhetes. Mover uma lanterna revela as áreas da composição. Use CSS mask ou técnica equivalente com bom desempenho. Os pontos descobertos permanecem identificados. Tenha um botão para acender a cena inteira, evitando que a interação esconda conteúdo de quem não consegue arrastar.
+
+24 — UMA INSTANTÂNEA NOSSA
+Câmera instantânea ilustrada, com botão de disparo. Ao tocar, flash suave, som apenas se habilitado e uma fotografia real saindo da câmera. A imagem ganha contraste aos poucos, simulando revelação. Não acessar a câmera do aparelho. Deixar rever a foto e repetir com outra do nosso conjunto.
+
+25 — LUGARES QUE GUARDAM LEMBRANÇAS
+Composição de cartões-postais ou globo ilustrado. Só colocar pins, nomes de cidades, distâncias e datas se esses dados forem preenchidos. Sem lugares informados, usar cartões com fotografias e legendas neutras. Não transformar uma cidade deduzida da conta ou do perfil em lugar confirmado da nossa história.
+
+26 — O QUE AINDA QUEREMOS VIVER
+Painel de planos futuros com cartões ilustrados. A lista deve ser configurável e pode começar com sugestões claramente apresentadas como ideias. Não afirmar que já fomos a Paris, viajamos juntos ou temos um destino escolhido. A interação vira os cartões ou marca um plano como realizado somente neste navegador.
+
+27 — UM JOGUINHO A DOIS
+Pequena barraca de parque ou máquina de fliperama ilustrada. Implemente um jogo simples de acertar corações e um desafio de tempo ou força por toque. Precisam ter começo, pontuação, término e opção de repetir. Use as mesmas regras de toque e teclado. Não incluir pagamento, fichas reais, loja externa ou premiação monetária.
+
+28 — VALES DE CARINHO
+Lojinha ilustrada com os vales simbólicos editáveis. Os pontos do jogo permitem escolher um vale. Mostrar saldo, quantidade e vales escolhidos, com persistência local. Indicar de maneira afetiva que o vale é combinado entre nós. Não apresentar essa marcação local como uma confirmação sincronizada ou enviada para outra pessoa.
+
+29 — COMBINADOS COM CARINHO
+Folha de papel com quatro ou cinco promessas curtas, originais e editáveis. Dar espaço para uma assinatura simbólica com o dedo ou um nome digitado, sem obrigar assinatura para continuar. Funciona como brincadeira do álbum, sem textos jurídicos copiados. Permitir limpar e refazer. Guardar apenas no navegador.
+
+30 — NOSSO PRÓXIMO CAPÍTULO
+Cena ao entardecer com um cadeado ilustrado e uma foto do casal. Ao tocar, o cadeado se fecha, uma pequena animação encerra o percurso e aparece uma mensagem final curta. Use as iniciais J & J de Jemima e João no cadeado. Ofereça voltar à capa, rever o começo e abrir os vídeos. O final não deve prender a pessoa numa tela sem saída.
+
+Os dois vídeos têm prioridade equivalente às fotos. Não esconda seu acesso atrás de vitória em jogo. O sumário deve levar diretamente a eles.
+
+8. FOTOGRAFIAS, ENQUADRAMENTO E ÁUDIO
+
+Preserve todos os originais. Se gerar versões WebP, miniaturas ou posters dos vídeos, mantenha os arquivos de origem e documente as derivações.
+
+Configure por foto: proporção, rotação visual e object-position. Fotos horizontais devem ter uma composição horizontal própria quando necessário. Para o primeiro encontro e o primeiro beijo, priorize a foto completa. Na ampliação, use contain e fundo coerente, sem distorcer ou preencher por IA.
+
+Mantenha nossos rostos, expressões, filtros e características. Não suavize pele, troque fundo, adicione pessoas ou transforme as fotos em ilustrações. Não use fotografias de outros casais nem imagens de banco no lugar das nossas.
+
+Vídeos com playsInline, preload moderado, poster real e controles. Não iniciar áudio sozinho ao carregar. Preserve os vídeos completos. Não suponha qual música está nas faixas de áudio sem escutar. Não baixe a trilha do TikTok de referência para usar como música do casal.
+
+O áudio geral, quando configurado, precisa de controle persistente de ligar, pausar e volume. Trate rejeição de play() e ausência do arquivo sem erro. Efeitos de papel ou sino são opcionais; só tocar depois de interação e com controle para silenciar.
+
+9. IMPLEMENTAÇÃO SUGERIDA
+
+Use a estrutura e as instruções do repositório se já existir um projeto. Em projeto vazio, a sugestão é React + TypeScript + Vite, CSS com variáveis e componentes organizados. Essa é uma proposta de implementação, não uma identificação da stack original da LovePanda.
+
+Separe: conteúdo pessoal; registro das mídias; estrutura do livro; controle de página; componentes das cenas; áudio; player de vídeo; persistência local. Evite um único componente enorme com todos os estados misturados.
+
+Para a virada, pode usar uma biblioteca adequada ou CSS 3D bem implementado. Confirme que a escolha permite conteúdo HTML interativo e vídeos. Não aceite uma solução que converta cada página inteira numa imagem estática e inutilize os objetos.
+
+Use SVG para detalhes e objetos quando fizer sentido; Canvas pode cuidar da raspadinha e da assinatura, sempre com alternativa acessível. Não introduza WebGL, backend, banco de dados, autenticação ou serviços pagos só para montar esse presente.
+
+Para fotos, textos e objetos em movimento, estabeleça camadas claras: fundo; ambiente; objetos; mídia real; texto; botões e áreas interativas. Use coordenadas relativas ao quadro de cada cena para os pontos clicáveis acompanharem a arte em tamanhos diferentes.
+
+Modele as interações com estados explícitos: carta fechada/abrindo/aberta; página parada/virando; vídeo parado/reproduzindo; bilhete entrando/visível; jogo pronto/em curso/finalizado. Limpe timers, listeners e mídias ao sair da cena. Evite ações repetidas que sobreponham animações.
+
+Persistência no navegador para página atual, cartas abertas, bilhetes lidos, jogos e pequenos estados. Versione a chave e tolere dados inválidos ou localStorage indisponível. Explique no README que isso não sincroniza entre dispositivos. Tenha uma ação discreta para reiniciar, com confirmação local antes de apagar progresso.
+
+Não publique automaticamente fotos e vídeos em um endereço público. Entregue uma prévia de desenvolvimento e instruções de publicação. Se for solicitado publicar depois, descreva o acesso real oferecido pela hospedagem. Uma senha gravada no JavaScript ou um link difícil de adivinhar não cria proteção efetiva para arquivos públicos.
+
+10. RESPONSIVIDADE E ACESSIBILIDADE
+
+Confira pelo menos 360 x 800, 390 x 844, 768 x 1024 e 1440 x 900. Teste também um celular de pouca altura. O livro pode ajustar sua composição ou permitir rolagem interna quando preciso; não diminua todo o conteúdo até ficar ilegível.
+
+Use áreas de toque de aproximadamente 44 px ou mais, foco visível, nomes acessíveis e texto alternativo descritivo. Não dependa de hover. Modais devem fechar por botão e Escape, conter o foco e devolvê-lo ao objeto que os abriu.
+
+Respeite prefers-reduced-motion. Movimento contínuo deve ser leve e pausado quando a cena não está visível. Evite flashes fortes. Permita ler textos mesmo com animação ou áudio desabilitados.
+
+No celular, considere safe-area e a variação da barra do navegador, usando unidades de viewport adequadas. Não pode haver rolagem horizontal acidental, controles encobertos ou página cortada pela barra inferior.
+
+11. DESEMPENHO E VERIFICAÇÃO
+
+Carregue primeiro capa e abertura. Pré-carregue as páginas próximas e carregue os vídeos quando forem necessários. Não monte 30 cenas com animações e players ativos ao mesmo tempo. Preserve o estado das cenas desmontadas.
+
+Depois de implementar, abra no navegador e confira os fluxos completos. Se houver ferramenta de screenshots, compare a capa e as cenas com a referência acessível e confira as versões móvel e desktop. Faça ajustes reais de composição; build passando sozinho não comprova o resultado visual.
+
+Verificações de aceitação:
+- Abertura do livro funciona e as 30 páginas são alcançáveis.
+- A numeração, o sumário e a navegação correspondem ao conteúdo.
+- O primeiro encontro usa 1000554942.jpg.
+- O primeiro beijo usa 1000554931.jpg e não é apresentado como um beijo visível na foto.
+- As dezoito fotos aparecem e a fotografia de lado é orientada corretamente.
+- Os dois vídeos abrem, tocam, pausam e fecham sem áudio concorrente.
+- As interações têm mudança de estado real e opção de repetição.
+- Arrastar peças, raspar e assinar não vira a página.
+- Dados pessoais ausentes não produzem texto de demonstração ou fatos inventados.
+- Contador começa no primeiro encontro, em 28 de agosto, e mostra “Desde o nosso primeiro encontro”; não depende de data de início do namoro nem inventa horário.
+- O progresso local persiste e pode ser reiniciado.
+- Teclado, botões alternativos e movimento reduzido funcionam.
+- Não há erros de console, arquivos quebrados, overflow ou rostos cortados nos marcos principais.
+- Os comandos de build e as verificações existentes do projeto passam.
+
+12. ENTREGA E FORMA DE TRABALHAR
+
+Leia as instruções do projeto e examine as mídias antes de escolher o enquadramento. Implemente uma base visual consistente, depois complete as cenas, integre as nossas mídias e confira tudo no navegador. Continue até obter uma versão navegável e coerente.
+
+As páginas podem compartilhar controles e componentes técnicos, mas precisam manter diferenças visuais e de interação. Não entregue 30 variações do mesmo card com título e foto. Se alguma interação não puder ser concluída, informe exatamente qual e por quê; não apresente um botão decorativo como recurso pronto.
+
+Entregue código organizado, instruções para instalar e executar, localização do arquivo de personalização, orientações para substituir música e acrescentar lembranças, além do que foi efetivamente verificado. Se alguma verificação não estiver disponível, registre-a sem inventar sucesso.
+
+O critério principal é que a pessoa abra, reconheça nossas fotos, encontre as lembranças do primeiro encontro e do primeiro beijo e sinta que está folheando um livro preparado para ela. O acabamento das ilustrações, dos enquadramentos e da interação deve sustentar essa experiência do começo ao fim.

@@ -1,0 +1,35 @@
+.botanical-flower { text-align:center; position:relative; padding-top:2px; }
+.botanical-caption { display:block; font:8px/1.7 Arial,sans-serif; letter-spacing:1.8px; text-transform:uppercase; color:#9b7064; }
+.botanical-flower .rose-touch { width:min(100%,290px); margin:5px auto 0; padding:0; transition:transform 900ms cubic-bezier(.2,.65,.2,1); }
+.botanical-flower.flower-is-open .rose-touch { transform:rotate(-3deg); }
+.botanical-flower .living-rose { width:100%; height:315px; overflow:visible; filter:drop-shadow(4px 9px 5px #7e4d4d18); }
+.rose-petal { transform-origin:150px 161px; transform:rotate(var(--closed-angle)) scale(.6,.86); transition:transform 1600ms cubic-bezier(.25,.05,.2,1); transition-delay:calc((5 * 95ms) - var(--petal-delay)); }
+.flower-is-open .rose-petal { transform:rotate(var(--open-angle)) scale(1); transition-delay:var(--petal-delay); }
+.rose-heart { transform-origin:150px 153px; transform:scale(.86,1); transition:transform 1800ms 250ms cubic-bezier(.2,.1,.2,1); }
+.flower-is-open .rose-heart { transform:translateY(-5px) scale(1.06); }
+.rose-leaf { transform-origin:150px 254px; transform:rotate(7deg) scale(.9); transition:transform 1600ms 180ms cubic-bezier(.2,.1,.2,1); }
+.rose-leaf-right { transform-origin:156px 229px; transform:rotate(-9deg) scale(.85); }
+.flower-is-open .rose-leaf { transform:rotate(-5deg) scale(1); }
+.flower-is-open .rose-leaf-right { transform:rotate(5deg) scale(1); }
+.botanical-note { display:grid; place-items:center; min-height:86px; width:min(265px,100%); margin:0 auto 10px; position:relative; font:italic 17px/1.6 var(--serif); color:#885560; }
+.botanical-note::before,.botanical-note::after { content:''; position:absolute; left:27%; right:27%; height:1px; background:#b890713b; transition:transform 1300ms,opacity 1300ms; }
+.botanical-note::before { top:0; }.botanical-note::after { bottom:0; }
+.botanical-note>span { grid-area:1/1; opacity:0; transform:translateY(10px); transition:opacity 650ms,transform 1100ms cubic-bezier(.2,.65,.2,1); }
+.botanical-note>.botanical-visible { opacity:1; transform:none; }
+.flower-is-open .botanical-note>.botanical-visible { transition-delay:1100ms; }
+.botanical-garden .garden-plants { gap:7px; margin:29px auto 18px; }
+.botanical-garden .plant { width:31%; opacity:1; overflow:visible; }
+.botanical-garden .plant svg { overflow:visible; animation:none!important; width:100%; height:auto; }
+.botanical-garden .plant-stem { transform-origin:50px 143px; transition:transform 1300ms cubic-bezier(.2,.55,.2,1); }
+.botanical-garden .plant-leaf { transition:transform 1100ms 120ms cubic-bezier(.2,.65,.2,1),opacity 900ms; }
+.botanical-garden .plant-bloom { transform-origin:50px 45px; transition:transform 1400ms 150ms cubic-bezier(.2,.5,.2,1),opacity 1000ms; }
+.garden-petal { transform-origin:50px 45px; transform:rotate(var(--petal-angle)) scale(.25,.65); transition:transform 1300ms cubic-bezier(.2,.6,.2,1); }
+.grown .garden-petal { transform:rotate(var(--petal-angle)) scale(1); transition-delay:var(--petal-delay); }
+.garden-water { position:absolute; top:0; left:25%; width:50%; height:50%; pointer-events:none; }
+.garden-water>i { position:absolute; top:-9px; left:calc(10% + var(--drop,0) * 20%); width:4px; height:8px; border-radius:60% 60% 55% 55%; background:#85aeb5; opacity:0; }
+.garden-water>i:nth-child(2){--drop:1}.garden-water>i:nth-child(3){--drop:2}.garden-water>i:nth-child(4){--drop:3}
+.plant-watering .garden-water>i { animation:garden-drop 850ms calc(var(--drop,0) * 110ms) ease-in both; }
+.plant-watering svg { transform-origin:50% 88%; animation:garden-nod 1200ms 200ms ease-in-out!important; }
+@keyframes garden-drop { 0%{opacity:0;transform:translateY(-14px) scale(.7)}20%{opacity:.8}75%{opacity:.65}100%{opacity:0;transform:translateY(118px) scale(.45)} }
+@keyframes garden-nod { 0%,100%{transform:rotate(0)}35%{transform:rotate(-3deg)}70%{transform:rotate(1.5deg)} }
+html[data-motion="reduced"] { .botanical-flower *,.botanical-garden * { transition:none!important;animation:none!important; }.garden-water{display:none}.botanical-note>.botanical-visible { transition-delay:0s; } }

@@ -1,0 +1,61 @@
+/* Isolated from the former jar animation; coordinates share the 280px stage. */
+.physical-jar { text-align: center; }
+.physical-jar-stage { position: relative; width: 280px; max-width: 100%; height: 354px; margin: 0 auto; isolation: isolate; }
+.physical-jar-touch { position: absolute; top: 38px; left: calc(50% - 92.5px); width: 185px; height: 199px; padding: 0; z-index: 1; }
+.physical-jar-touch:disabled { opacity: 1; }
+.physical-jar-glass { width: 185px; height: 199px; }
+.physical-jar-lid { position: absolute; left: 56px; top: 29px; width: 73px; height: 20px; overflow: visible; transform-origin: 18% 90%; filter: drop-shadow(0 2px 1px #5d46392b); }
+.physical-jar-flight { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+.physical-jar .physical-jar-paper.jar-note { position: absolute; left: 50%; top: 248px; width: 236px; max-width: calc(100% - 8px); height: 98px; min-height: 0; margin: 0; padding: 14px 16px 21px; display: flex; align-items: center; justify-content: center; background: linear-gradient(90deg,#f8e9c7,#fff3d7 49.5%,#eddcb4 50%,#fff1d0 51%,#f8e9c7); border: 1px solid #d4bd9455; border-radius: 2px; color: #745143; font: italic 15px/1.5 var(--serif); box-shadow: 0 3px 6px #6a4c3322; transform: translateX(-50%) rotate(-2deg); transform-origin: center center; overflow: hidden; animation: none; }
+.physical-jar-fold { position: absolute; inset: 50% 0 auto; height: 1px; background: #c0a16a26; box-shadow: 0 1px #fff6; }
+.physical-jar-ink { position: relative; display: block; }
+.physical-jar-signature { position: absolute; right: 13px; bottom: 6px; color: #9c7860; font: italic 8px var(--serif); white-space: nowrap; }
+.physical-jar-paper-shadow { position: absolute; z-index: 0; left: calc(50% - 85px); top: 331px; width: 170px; height: 12px; border-radius: 50%; background: #63442720; filter: blur(5px); transform: rotate(-2deg); }
+.physical-jar-invitation { position: absolute; top: 268px; left: 0; right: 0; color: #956e56; font: italic 15px/1.7 var(--serif); }
+.physical-jar > .text-button { margin-top: 4px; }
+.physical-jar > .hint { font-size: 9px; min-height: 18px; }
+.physical-jar-reader { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); }
+.physical-jar[data-phase="drawing"] .physical-jar-lid { animation: physical-lid-open 3200ms linear both; }
+.physical-jar[data-phase="drawing"] .physical-jar-glass { animation:physical-glass-answer 900ms ease-in-out both;transform-origin:50% 93%; }
+.physical-jar[data-phase="drawing"] .physical-jar-flight { animation: physical-mouth-occlusion 3200ms linear both; }
+.physical-jar[data-phase="drawing"] .physical-jar-paper { animation: physical-paper-journey 3200ms linear both; }
+.physical-jar[data-phase="drawing"] .physical-jar-ink,
+.physical-jar[data-phase="drawing"] .physical-jar-signature { animation: physical-paper-ink 3200ms ease both; }
+.physical-jar[data-phase="drawing"] .physical-jar-paper-shadow { animation: physical-paper-shadow 3200ms linear both; }
+.physical-jar[data-phase="putting-away"] .physical-jar-paper { animation: physical-paper-away 380ms ease-in both; }
+.physical-jar[data-phase="putting-away"] .physical-jar-paper-shadow { transition: opacity 300ms; opacity: 0; }
+@keyframes physical-lid-open {
+  0% { transform: translate(0,0) rotate(0); }
+  10% { transform: translate(0,-9px) rotate(-3deg); animation-timing-function: cubic-bezier(.2,.65,.3,1); }
+  25%,57% { transform: translate(-43px,-39px) rotate(-23deg); }
+  76%,100% { transform: translate(0,0) rotate(0); }
+}
+/* The mask hides only the inside of the jar. Release it once the WHOLE paper is above y=82. */
+@keyframes physical-mouth-occlusion {
+  0%,43.9% { clip-path: inset(0 0 calc(100% - 82px) 0); }
+  44%,100% { clip-path: inset(0 -10px -10px); }
+}
+@keyframes physical-paper-journey {
+  0%,17% { top: 166px; width: 58px; height: 46px; padding: 0; transform: translateX(-50%) rotate(-3deg); animation-timing-function: cubic-bezier(.32,0,.35,1); }
+  44% { top: 17px; width: 58px; height: 46px; padding: 0; transform: translateX(-50%) rotate(4deg); animation-timing-function: cubic-bezier(.3,.1,.4,1); }
+  55% { top: 3px; width: 58px; height: 46px; padding: 0; transform: translateX(calc(-50% + 36px)) rotate(12deg); animation-timing-function: cubic-bezier(.55,.05,.8,.5); }
+  73% { top: 244px; width: 58px; height: 46px; padding: 0; transform: translateX(calc(-50% + 9px)) rotate(-5deg); animation-timing-function: cubic-bezier(.2,.65,.2,1); }
+  91% { top: 248px; width: 236px; height: 98px; padding: 14px 16px 21px; transform: translateX(-50%) rotate(-1deg); }
+  100% { top: 248px; width: 236px; height: 98px; padding: 14px 16px 21px; transform: translateX(-50%) rotate(-2deg); }
+}
+@keyframes physical-paper-ink { 0%,79% { opacity: 0; } 98%,100% { opacity: 1; } }
+@keyframes physical-paper-shadow {
+  0%,44% { opacity: 0; transform: scale(.3); }
+  55% { opacity: .18; transform: translate(22px,-70px) scale(.4); }
+  73% { opacity: .65; transform: translate(8px,-45px) scale(.5); }
+  100% { opacity: 1; transform: rotate(-2deg); }
+}
+@keyframes physical-paper-away {
+  0% { transform: translateX(-50%) rotate(-2deg); opacity: 1; }
+  45% { transform: translateX(-50%) rotate(1deg) rotateX(32deg); opacity: .9; }
+  100% { transform: translate(-30%,28px) rotate(8deg) rotateX(68deg); opacity: 0; }
+}
+@keyframes physical-glass-answer {0%,100%{transform:rotate(0)}22%{transform:rotate(-2.5deg)}50%{transform:rotate(1.5deg)}75%{transform:rotate(-.5deg)}}
+html[data-motion="reduced"] {
+  .physical-jar *, .physical-jar *::before, .physical-jar *::after { animation: none !important; transition: none !important; }
+}

@@ -1,0 +1,98 @@
+/* The mouth and clipping edge share one coordinate. The sheet exists from
+   the start and moves through that edge; no opacity, scale or DOM replacement. */
+.physical-booth .booth-curtain {
+  --paper-width: 133px;
+  --mouth-y: 20px;
+  height: 349px;
+  min-height: 349px;
+  padding: 0;
+  isolation: isolate;
+}
+.physical-booth .booth-paper-channel {
+  position: absolute;
+  z-index: 2;
+  top: var(--mouth-y);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.physical-booth .physical-photo-strip {
+  box-sizing: border-box;
+  position: relative;
+  width: var(--paper-width);
+  margin: 0 auto;
+  padding: 8px 8px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  background: #f6ecd8;
+  border-radius: 0 0 2px 2px;
+  box-shadow: 2px 8px 10px #170b1480;
+  transform: translateY(-100%);
+  animation: none;
+  transition: transform 3.6s cubic-bezier(.3,.08,.55,1);
+  will-change: transform;
+}
+.physical-booth[data-print-phase="printing"] .physical-photo-strip,
+.physical-booth[data-print-phase="ready"] .physical-photo-strip {transform: translateY(0)}
+.physical-booth[data-print-phase="retracting"] .physical-photo-strip {
+  transform: translateY(-100%);
+  transition-duration: .68s;
+  transition-timing-function: cubic-bezier(.55,0,.8,.5);
+}
+.physical-booth[data-print-phase="ready"] .physical-photo-strip {will-change:auto}
+.physical-booth .physical-photo-strip .polaroid {
+  min-width:0;
+  width:100%;
+  padding:0;
+  margin:0;
+  transform:none;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  background:#eadfc7;
+}
+.physical-booth .physical-photo-strip .photo-image {height:88px;aspect-ratio:auto!important}
+.physical-booth .physical-photo-strip .photo-image img {object-fit:contain;background:#e7d6bb}
+.physical-booth .physical-photo-strip > span {grid-column:1;font:7px/1.5 var(--serif);letter-spacing:.3px;margin:2px -4px 0;color:#77563d}
+.physical-booth .booth-printer-slot {
+  z-index:3;
+  top:calc(var(--mouth-y) - 6px);
+  left:calc(50% - 79px);
+  right:auto;
+  width:158px;
+  height:8px;
+  border:1px solid #b08b5a;
+  border-bottom-color:#3b252a;
+  background:#20151a;
+  border-radius:5px;
+  box-shadow:0 2px 3px #10080b88;
+}
+.physical-booth .booth-printer-lip {
+  position:absolute;
+  z-index:4;
+  top:calc(var(--mouth-y) - 1px);
+  left:calc(50% - 74px);
+  width:148px;
+  height:4px;
+  background:linear-gradient(#372129,#1a1116bb,transparent);
+  pointer-events:none;
+}
+.physical-booth .booth-idle {
+  position:absolute;
+  inset:30px 0 0;
+  min-height:0;
+  transition:opacity .3s ease;
+}
+.physical-booth:not([data-print-phase="idle"]) .booth-idle {opacity:0;pointer-events:none}
+.physical-booth[data-print-phase="printing"] .booth-lights i {animation:printer-light .8s ease-in-out infinite}
+.physical-booth[data-print-phase="printing"] .booth-lights i:nth-child(2n) {animation-delay:.2s}
+.physical-booth .booth-curtain::after {content:'';position:absolute;inset:0;z-index:6;pointer-events:none;background:radial-gradient(ellipse at 50% 30%,#fff5cf,#ffebbb55 60%,transparent);opacity:0}
+.physical-booth[data-print-phase="capturing"] .booth-curtain::after {animation:booth-capture-flash 380ms 3 ease-out both}
+.physical-booth[data-print-phase="capturing"] .booth-lights i {animation:printer-light 380ms 3 ease-in-out}
+@keyframes booth-capture-flash {0%,100%{opacity:0}20%{opacity:.75}50%{opacity:.1}}
+html[data-motion="reduced"] {
+  .physical-booth .physical-photo-strip {transition:none;will-change:auto}
+  .physical-booth .booth-lights i {animation:none}
+}

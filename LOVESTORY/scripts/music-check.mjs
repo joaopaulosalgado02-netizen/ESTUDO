@@ -1,0 +1,37 @@
+import { chromium } from 'playwright-core';
+import assert from 'node:assert/strict';
+import { existsSync, writeFileSync } from 'node:fs';
+import { mockSpotify } from './spotify-fixture.mjs';
+const executablePath=process.env.BROWSER_PATH||['C:/Program Files/Google/Chrome/Application/chrome.exe','C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'].find(existsSync);
+const browser=await chromium.launch({executablePath,headless:true});
+try {
+  const context=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});
+  await mockSpotify(context);
+  await context.addInitScript(()=>localStorage.setItem('lovestory.jemima-joao.v1',JSON.stringify({version:1,page:17,opened:true,scenes:{},points:0,vouchers:[]})));
+  const page=await context.newPage(); const errors=[]; page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(process.env.ALBUM_URL||'http://127.0.0.1:5177/');
+  assert.equal(await page.locator('.music-dock').count(),0);
+  await page.getByRole('button',{name:'Girar a manivela e abrir a caixinha'}).click();
+  await page.waitForFunction(()=>window.__spotifyTest?.playing===true);
+  assert.equal(await page.evaluate(()=>window.__spotifyTest.uri),'spotify:track:2WxFuSpORAwJ1XNDeBMSg9');
+  assert.match(await page.locator('.music-dock').innerText(),/Marisa Monte/);
+  await page.getByRole('button',{name:'Pausar música',exact:true}).click();
+  assert.equal(await page.evaluate(()=>window.__spotifyTest.playing),false);
+  await page.getByRole('button',{name:'Ouvir nossa música',exact:true}).click();
+  await page.waitForFunction(()=>window.__spotifyTest.playing===true);
+  await page.getByRole('button',{name:'Abrir sumário',exact:true}).click();await page.locator('dialog .chapter-pages button').nth(21).click();await page.locator('[data-page="22"]').waitFor();
+  assert.equal(await page.evaluate(()=>window.__spotifyTest.playing),true);
+  await page.locator('.cinema-ticket').first().click();await page.locator('dialog video').waitFor();
+  assert.equal(await page.evaluate(()=>window.__spotifyTest.playing),false);
+  await page.getByRole('button',{name:'Fechar',exact:true}).click();
+  await page.waitForFunction(()=>window.__spotifyTest.playing===true);
+  await page.getByRole('button',{name:'Pausar música',exact:true}).click();
+  await page.locator('.cinema-ticket').nth(1).click();await page.locator('dialog video').waitFor();
+  await page.getByRole('button',{name:'Fechar',exact:true}).click();await page.locator('dialog').waitFor({state:'detached'});
+  assert.equal(await page.evaluate(()=>window.__spotifyTest.playing),false);
+  await page.getByRole('button',{name:'Guardar a música'}).click();await page.locator('.music-dock').waitFor({state:'detached'});
+  assert.equal(await page.evaluate(()=>window.__spotifyTest.calls.includes('destroy')),true);
+  assert.deepEqual(errors,[]);
+  writeFileSync('.qa/music-controller-report.json',JSON.stringify({mode:'mocked official controller contract; no real streaming claimed',track:'2WxFuSpORAwJ1XNDeBMSg9',checks:['on-demand initialization','correct track and artist','play/pause commands','persistent while navigating','pause for video','resume only if previously playing','destroy on dismissal'],errors},null,2));
+  console.log('PASS contrato do player: faixa correta, play/pausa, navegação, vídeo e encerramento. Streaming real não testado pelo mock.');
+}finally{await browser.close();}

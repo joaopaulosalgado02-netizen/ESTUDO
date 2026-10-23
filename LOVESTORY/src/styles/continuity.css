@@ -1,0 +1,42 @@
+/* Dialogs use Web Animations from the touched object's actual position. */
+.modal[open],.modal[open].is-closing { animation: none; transform-origin: center; will-change: transform,opacity; }
+.modal[open]::backdrop { animation: backdrop-in 420ms ease both; }
+.modal[open].is-closing::backdrop { animation: backdrop-out 380ms ease both; }
+.modal[data-variant="letter"] { border-radius: 2px; background: linear-gradient(90deg,#e7d7b9,#fcf2de 7%,#f7ecd6 94%,#e2ceaa); }
+.modal[data-variant="letter"] .modal-shell { padding-top: 23px; }
+.modal[data-variant="letter"] .letter-content p { animation: letter-ink-enter 650ms 170ms ease both; }
+.modal[data-variant="letter"].is-closing .letter-content p { animation: none; }
+.gallery .gallery-photo.polaroid { animation: none; transition: transform 460ms cubic-bezier(.2,.7,.2,1),opacity 460ms ease; }
+.gallery .gallery-current { z-index:2; opacity:0; transform:translateX(var(--gallery-from,12px)) scale(.985); }
+.gallery .gallery-current:has(.photo-image[data-state="ready"]) { opacity:1; transform:translateX(0) scale(1); }
+.gallery .gallery-outgoing { z-index:1; opacity:1; transform:translateX(0) scale(1); }
+.gallery-stage:has(.gallery-current .photo-image[data-state="ready"]) .gallery-outgoing { opacity:0; transform:translateX(calc(var(--gallery-from,12px) * -1)) scale(.985); }
+.gallery .gallery-outgoing { pointer-events:none; }
+.is-closing-book .reading-room { animation: room-fold-away 480ms cubic-bezier(.4,0,.3,1) both; pointer-events:none; transform-origin:center; }
+.book-is-closed .cover-stage { animation: cover-settle 480ms cubic-bezier(.2,.7,.2,1) both; }
+.music-dock { width:min(540px,calc(100% - 28px)); margin:8px auto 0; flex-shrink:0; padding:0 11px 8px; border:1px solid #c8a56a55; background:#231622; color:#f0dec0; border-radius:10px; box-shadow:0 6px 20px #190c1c44; animation:music-arrive 500ms cubic-bezier(.2,.7,.2,1) both; }
+.music-dock-heading { display:flex; align-items:center; justify-content:space-between; min-height:36px; gap:10px; }
+.music-dock-heading>span { display:flex; align-items:center; gap:7px; font:12px var(--serif); }
+.music-dock-heading i { font-size:10px; font-style:normal; opacity:.65; }
+.music-dock-heading .icon-button { width:36px; height:36px; min-width:36px; min-height:36px; border:0; }
+.spotify-host { min-height:80px; }
+.spotify-host iframe,.music-dock>iframe { display:block; width:100%; height:80px; border:0; border-radius:7px; }
+.music-loading { margin-top:-58px; min-height:58px; pointer-events:none; font:italic 12px/1.6 var(--serif); opacity:.65; padding:12px; }
+.music-unavailable { min-height:80px;display:flex;align-items:center;gap:12px;padding:10px 12px;background:linear-gradient(110deg,#533044,#292230);border-radius:7px }
+.music-unavailable>svg { color:#d8b986;flex-shrink:0 }
+.music-unavailable>span { font:italic 13px/1.5 var(--serif);flex:1 }
+.music-unavailable small { display:block;font:9px/1.6 Arial,sans-serif;opacity:.6;margin-top:5px }
+.music-unavailable>a { width:44px;height:44px;display:flex;align-items:center;justify-content:center;border:1px solid #d9bb87;border-radius:50%;color:#eedcba;flex-shrink:0 }
+.music-dock-note { margin:7px 3px 0; display:flex; justify-content:space-between; gap:10px; font:9px/1.5 Arial,sans-serif; opacity:.8; }
+.music-dock-note a { color:#e8d2a6; white-space:nowrap; text-underline-offset:3px; }
+.with-music .open-book { height:min(690px,calc(100dvh - 380px)); min-height:280px; transition:height 420ms cubic-bezier(.2,.7,.2,1); }
+.with-music .app-footer { min-height:34px; }
+.open-book { transition:height 420ms cubic-bezier(.2,.7,.2,1); }
+.music-dock-closing { animation:music-depart 300ms ease both; pointer-events:none; }
+@keyframes music-depart { to { opacity:0; transform:translateY(20px) scale(.98); } }
+@keyframes letter-ink-enter { from { opacity:.2; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+@keyframes room-fold-away { 0%{opacity:1;transform:perspective(1400px) rotateX(0) scale(1)} 100%{opacity:0;transform:perspective(1400px) rotateX(9deg) scale(.87) translateY(25px)} }
+@keyframes cover-settle { from{opacity:.1;transform:translateY(12px) scale(.97)} to{opacity:1;transform:translateY(0) scale(1)} }
+@keyframes music-arrive { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+@media(max-width:600px) { .with-music .open-book{height:calc(100dvh - 360px);min-height:260px} .music-dock{margin-top:4px}.music-dock-heading>span{font-size:11px}.music-dock-note{font-size:8px}.music-dock-heading i{font-size:9px} }
+html[data-motion="reduced"] { .modal[open]::backdrop,.modal[open].is-closing::backdrop,.letter-content p,.is-closing-book .reading-room,.book-is-closed .cover-stage,.music-dock{animation:none!important}.gallery .gallery-photo.polaroid{transition:none!important} }

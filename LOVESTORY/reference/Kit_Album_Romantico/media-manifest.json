@@ -1,0 +1,898 @@
+{
+  "schemaVersion": 2,
+  "purpose": "Planejamento de uso das mídias no álbum; os arquivos são originais sem edição.",
+  "mediaCount": {
+    "images": 18,
+    "videos": 2,
+    "total": 20
+  },
+  "personalization": {
+    "senderName": "João",
+    "recipientName": "Jemima",
+    "firstMeetingDate": null,
+    "firstKissDate": null,
+    "relationshipStartDate": null,
+    "musicFile": null,
+    "city": null,
+    "recipientNickname": "Mima",
+    "coupleDisplayName": "Jemima e João",
+    "initials": "J & J",
+    "musicTitle": "Totalmente Seu",
+    "musicArtist": null,
+    "counterStartDate": "2026-08-28",
+    "counterStartEvent": "first_meeting",
+    "counterLabel": "Desde o nosso primeiro encontro"
+  },
+  "confirmedEvents": [
+    {
+      "id": "first_meeting",
+      "title": "O dia em que a gente se conheceu",
+      "mediaIds": [
+        "photo_first_meeting"
+      ],
+      "date": "2026-08-28",
+      "reportedDate": {
+        "day": 28,
+        "relativeMonth": "explicit_august",
+        "candidateMonth": 8,
+        "candidateYear": 2026,
+        "candidateDate": "2026-08-28",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "first_kiss",
+      "title": "Nosso primeiro beijo",
+      "mediaIds": [
+        "photo_first_kiss_memory"
+      ],
+      "date": "2026-09-19",
+      "reportedDate": {
+        "day": 19,
+        "relativeMonth": "explicit_september",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-19",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": "early_morning",
+        "exactTime": null
+      }
+    },
+    {
+      "id": "first_face_masks",
+      "title": "Nossa primeira máscara facial juntos",
+      "mediaIds": [
+        "photo_faces_close",
+        "video_1000567511",
+        "video_1000567513"
+      ],
+      "date": "2026-10-10",
+      "reportedDate": {
+        "day": 10,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-10",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": null,
+        "exactTime": null
+      },
+      "note": "Usuário confirmou que a foto dos rostos juntinhos e os dois vídeos de máscara são do mesmo dia, 10 de outubro.",
+      "includeInTimeline": true
+    }
+  ],
+  "chronologyNote": "Meses do primeiro encontro e do primeiro beijo esclarecidos: 28 de agosto e 19 de setembro. O dia das máscaras, foto F13 e dois vídeos, foi confirmado em 10 de outubro. As associações provisórias dos demais arquivos continuam sinalizadas individualmente.",
+  "media": [
+    {
+      "id": "photo_golden_light",
+      "file": "media/1000566190.jpg",
+      "type": "image",
+      "width": 1536,
+      "height": 864,
+      "description": "Selfie horizontal em luz dourada.",
+      "date": "2026-10-16",
+      "eventId": "sunset_oct16",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "sha256": "d96ec3446cf5076470ced18f4deff210ad1da17356e88f265b337621ce95f0b0",
+      "label": "F01",
+      "webFile": "media/1000566190.jpg",
+      "mimeType": "image/jpeg",
+      "reportedDate": {
+        "day": 16,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-16",
+        "status": "reported_day_relative_month_resolved",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "photo_cover",
+      "file": "media/1000564083.jpg",
+      "type": "image",
+      "width": 864,
+      "height": 1536,
+      "description": "Selfie vertical próxima, ela com óculos.",
+      "date": null,
+      "eventId": null,
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "sha256": "5e2320d4e75c96bbc2edfd45a26472edc25695e4b7a36694e706079b4d5becb2",
+      "label": "F02",
+      "webFile": "media/1000564083.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "photo_sideways",
+      "file": "media/1000564082.jpg",
+      "type": "image",
+      "width": 864,
+      "height": 1536,
+      "description": "Selfie de lado, ela mostrando a língua.",
+      "date": null,
+      "eventId": null,
+      "rotationCssDeg": -90,
+      "chronologicalOrder": null,
+      "sha256": "e24a404caeac54624255f33f05c66b5a2b3fec57694ae89fc8795a965fdbaac3",
+      "displayWidth": 1536,
+      "displayHeight": 864,
+      "orientationNote": "Rotação visual inicial a conferir na implementação; preserve o original.",
+      "label": "F03",
+      "webFile": "media/1000564082.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "photo_filter",
+      "file": "media/1000564064.jpg",
+      "type": "image",
+      "width": 864,
+      "height": 1536,
+      "description": "Filtro de orelhas e focinho; camiseta com aranha vermelha.",
+      "date": null,
+      "eventId": null,
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "sha256": "1d5a005715950454fa94dd42b23bc27570459382bfc7b17589e6692bc60954c2",
+      "label": "F04",
+      "webFile": "media/1000564064.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "photo_embrace",
+      "file": "media/1000564057.jpg",
+      "type": "image",
+      "width": 864,
+      "height": 1536,
+      "description": "Selfie abraçados com tonalidade arroxeada.",
+      "date": null,
+      "eventId": null,
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "sha256": "067cb624c4d9df1bfece35b3a11caeb77900764ed06eb9cdce157442920620eb",
+      "label": "F05",
+      "webFile": "media/1000564057.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "photo_funny_faces",
+      "file": "media/1000564052.jpg",
+      "type": "image",
+      "width": 864,
+      "height": 1536,
+      "description": "Selfie fazendo caretas, com marca do TikTok.",
+      "date": null,
+      "eventId": null,
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "sha256": "ea2f92e4fbf13484377ebe4d8b79ea207f6ed96f526d659d8254a4a44c10ac1f",
+      "label": "F06",
+      "webFile": "media/1000564052.jpg",
+      "mimeType": "image/jpeg"
+    },
+    {
+      "id": "photo_first_meeting",
+      "file": "media/1000554942.jpg",
+      "type": "image",
+      "width": 864,
+      "height": 1536,
+      "description": "Os dois mostrando a língua, fotografados de baixo para cima.",
+      "date": "2026-08-28",
+      "eventId": "first_meeting",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "sha256": "d0975f5323811373521bb1779391d9baa8498bd00885137bdbb1c86fca23e2fb",
+      "label": "F07",
+      "webFile": "media/1000554942.jpg",
+      "mimeType": "image/jpeg",
+      "reportedDate": {
+        "day": 28,
+        "relativeMonth": "explicit_august",
+        "candidateMonth": 8,
+        "candidateYear": 2026,
+        "candidateDate": "2026-08-28",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "photo_first_kiss_memory",
+      "file": "media/1000554931.jpg",
+      "type": "image",
+      "width": 1536,
+      "height": 864,
+      "description": "Selfie horizontal no carro; registro associado ao primeiro beijo.",
+      "date": "2026-09-19",
+      "eventId": "first_kiss",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "sha256": "6b383d765e6ea75333e193819a403957edb4901fb0a53f0ac80760fc7f839e7b",
+      "label": "F08",
+      "webFile": "media/1000554931.jpg",
+      "mimeType": "image/jpeg",
+      "reportedDate": {
+        "day": 19,
+        "relativeMonth": "explicit_september",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-19",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": "early_morning",
+        "exactTime": null
+      }
+    },
+    {
+      "id": "video_1000567511",
+      "file": "media/1000567511.mp4",
+      "type": "video",
+      "width": 576,
+      "height": 1024,
+      "durationSeconds": 15.157257,
+      "hasAudio": true,
+      "description": "Registro dos dois com máscaras faciais escuras, poses e caretas.",
+      "date": "2026-10-10",
+      "chronologicalOrder": null,
+      "sha256": "8e66ce41042bbb81e62bb4330e5edd882c8e5bbe0e6f9b3d0c42019d9b2bf598",
+      "webFile": "media/1000567511.mp4",
+      "eventId": "first_face_masks",
+      "reportedDate": {
+        "day": 10,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-10",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "video_1000567513",
+      "file": "media/1000567513.mp4",
+      "type": "video",
+      "width": 576,
+      "height": 1024,
+      "durationSeconds": 20.967538,
+      "hasAudio": true,
+      "description": "Registro dos dois com máscaras faciais escuras, poses e caretas.",
+      "date": "2026-10-10",
+      "chronologicalOrder": null,
+      "sha256": "7d1bbb5426ee5c08464ca9fee2cf57a0bf6c5c20b8f10e163449b8387c42d553",
+      "webFile": "media/1000567513.mp4",
+      "eventId": "first_face_masks",
+      "reportedDate": {
+        "day": 10,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-10",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "photo_black_outfits",
+      "label": "F09",
+      "file": "media/1000554941.jpg",
+      "webFile": "media/1000554941.jpg",
+      "type": "image",
+      "width": 864,
+      "height": 1536,
+      "mimeType": "image/jpeg",
+      "description": "Os dois de preto, fotografados de baixo para cima na igreja.",
+      "date": null,
+      "eventId": "black_outfits_sep29",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "reportedDate": {
+        "day": 29,
+        "relativeMonth": "previous",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-29",
+        "status": "reported_by_description",
+        "period": null,
+        "exactTime": null
+      },
+      "sha256": "106fadf7918fa8c7369fe020fba91c4cb24598c26e8cc346e032f78c212bf70d"
+    },
+    {
+      "id": "photo_central_church",
+      "label": "F10",
+      "file": "media/1000554918.heic",
+      "webFile": "media/web/1000554918.jpg",
+      "type": "image",
+      "width": 1152,
+      "height": 1536,
+      "mimeType": "image/jpeg",
+      "description": "Selfie com terno e roupas/detalhes em rosa; ida à Central à noite.",
+      "date": "2026-09-19",
+      "eventId": "central_church_sep19",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "reportedDate": {
+        "day": 19,
+        "relativeMonth": "previous",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-19",
+        "status": "reported_day_relative_month_resolved",
+        "period": "night",
+        "exactTime": null
+      },
+      "sha256": "7d7bb6232df70c4fa57f819eede7c8917b3bd65fd9a6582df37ba85f54c5f08a",
+      "formatNote": "O conteúdo recebido é JPEG, apesar da extensão original; a cópia .jpg tem os mesmos bytes."
+    },
+    {
+      "id": "photo_care_pimple",
+      "label": "F11",
+      "file": "media/1000554913.heic",
+      "webFile": "media/web/1000554913.jpg",
+      "type": "image",
+      "width": 1536,
+      "height": 1152,
+      "mimeType": "image/jpeg",
+      "description": "Ela tirando espinha dele.",
+      "date": "2026-09-20",
+      "eventId": "care_sep20",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "reportedDate": {
+        "day": 20,
+        "relativeMonth": "previous",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-20",
+        "status": "reported_day_relative_month_resolved",
+        "period": null,
+        "exactTime": null
+      },
+      "sha256": "4f893e000340ae9b61caef76803051a22761bed8f767602eeb89ea1515e5559a",
+      "formatNote": "O conteúdo recebido é JPEG, apesar da extensão original; a cópia .jpg tem os mesmos bytes."
+    },
+    {
+      "id": "photo_bibo_gift",
+      "label": "F12",
+      "file": "media/1000554906.jpg",
+      "webFile": "media/1000554906.jpg",
+      "type": "image",
+      "width": 864,
+      "height": 1536,
+      "mimeType": "image/jpeg",
+      "description": "Ela com a pelúcia Bibo/Bibble, presente dado por ele.",
+      "date": "2026-09-23",
+      "eventId": "bibo_sep23",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "reportedDate": {
+        "day": 23,
+        "relativeMonth": "previous",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-23",
+        "status": "reported_day_relative_month_resolved",
+        "period": null,
+        "exactTime": null
+      },
+      "sha256": "249140c23769d93a969d82a01135b228c0f11b0eb25ed40a594436b2d0235b3b"
+    },
+    {
+      "id": "photo_faces_close",
+      "label": "F13",
+      "file": "media/1000564142.heic",
+      "webFile": "media/web/1000564142.jpg",
+      "type": "image",
+      "width": 1536,
+      "height": 1152,
+      "mimeType": "image/jpeg",
+      "description": "Os rostos muito próximos.",
+      "date": "2026-10-10",
+      "eventId": "first_face_masks",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "reportedDate": {
+        "day": 10,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-10",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": null,
+        "exactTime": null
+      },
+      "sha256": "2f3d9a5f0d4af7534d31fbb7626966821117c79512fc5125e9b8041ffa8258a4",
+      "formatNote": "O conteúdo recebido é JPEG, apesar da extensão original; a cópia .jpg tem os mesmos bytes."
+    },
+    {
+      "id": "photo_rural_tongue",
+      "label": "F14",
+      "file": "media/1000564625.heic",
+      "webFile": "media/web/1000564625.jpg",
+      "type": "image",
+      "width": 1536,
+      "height": 1152,
+      "mimeType": "image/jpeg",
+      "description": "Ela mostrando a língua e o rosto dele parcialmente cortado.",
+      "date": null,
+      "eventId": "rural_tongue",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "reportedDate": {
+        "day": null,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": null,
+        "status": "day_13_or_14_pending",
+        "period": null,
+        "exactTime": null
+      },
+      "sha256": "5ff95bc5105eb39a66b796be7314fbac84b8405d639daf34d8ac9ddb4ce878e2",
+      "formatNote": "O conteúdo recebido é JPEG, apesar da extensão original; a cópia .jpg tem os mesmos bytes."
+    },
+    {
+      "id": "photo_rural_cake",
+      "label": "F15",
+      "file": "media/1000564710.webp",
+      "webFile": "media/web/1000564710.jpg",
+      "type": "image",
+      "width": 864,
+      "height": 1536,
+      "mimeType": "image/jpeg",
+      "description": "Os dois com uma vasilha de bolo.",
+      "date": "2026-10-14",
+      "eventId": "rural_cake_oct14",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "reportedDate": {
+        "day": 14,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-14",
+        "status": "reported_day_relative_month_resolved",
+        "period": null,
+        "exactTime": null
+      },
+      "sha256": "92c946a357e9a3fcb46606717948572e82752b8a386a6f665377a8019e19c5fd",
+      "formatNote": "O conteúdo recebido é JPEG, apesar da extensão original; a cópia .jpg tem os mesmos bytes."
+    },
+    {
+      "id": "photo_rural_hand",
+      "label": "F16",
+      "file": "media/1000565363.jpg",
+      "webFile": "media/1000565363.jpg",
+      "type": "image",
+      "width": 864,
+      "height": 1536,
+      "mimeType": "image/jpeg",
+      "description": "Ela com a mão no rosto, ao ar livre.",
+      "date": "2026-10-15",
+      "eventId": "rural_hand_oct15",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "reportedDate": {
+        "day": 15,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-15",
+        "status": "reported_day_relative_month_resolved",
+        "period": null,
+        "exactTime": null
+      },
+      "sha256": "c743a3d1b4fdb1c910870938be019b04dbd385867da4a508e64d78a98952d0af"
+    },
+    {
+      "id": "photo_rural_portrait",
+      "label": "F17",
+      "file": "media/1000566011.heic",
+      "webFile": "media/web/1000566011.jpg",
+      "type": "image",
+      "width": 1152,
+      "height": 1536,
+      "mimeType": "image/jpeg",
+      "description": "Selfie próxima, ela de óculos.",
+      "date": null,
+      "eventId": "rural_portrait",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "reportedDate": {
+        "day": 16,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-16",
+        "status": "file_day_association_provisional",
+        "period": null,
+        "exactTime": null
+      },
+      "sha256": "7887edf5e0bb17f85ee59c7198817635e65cef925a2c0f7adec3b554f22766ee",
+      "formatNote": "O conteúdo recebido é JPEG, apesar da extensão original; a cópia .jpg tem os mesmos bytes."
+    },
+    {
+      "id": "photo_rural_fun",
+      "label": "F18",
+      "file": "media/1000566568.heic",
+      "webFile": "media/web/1000566568.jpg",
+      "type": "image",
+      "width": 1536,
+      "height": 1152,
+      "mimeType": "image/jpeg",
+      "description": "Selfie fazendo caretas, com ele mostrando a língua.",
+      "date": null,
+      "eventId": "rural_fun",
+      "rotationCssDeg": 0,
+      "chronologicalOrder": null,
+      "reportedDate": {
+        "day": 18,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-18",
+        "status": "file_day_association_provisional",
+        "period": null,
+        "exactTime": null
+      },
+      "sha256": "aeca9d0a85639f2339b8f49fcbfa90b02588702e1986cbb7cada480c5225630a",
+      "formatNote": "O conteúdo recebido é JPEG, apesar da extensão original; a cópia .jpg tem os mesmos bytes."
+    }
+  ],
+  "conversationLocalDate": "2026-10-22",
+  "conversationTimeZone": "America/Sao_Paulo",
+  "events": [
+    {
+      "id": "first_meeting",
+      "title": "O dia em que a gente se conheceu",
+      "mediaIds": [
+        "photo_first_meeting"
+      ],
+      "date": "2026-08-28",
+      "reportedDate": {
+        "day": 28,
+        "relativeMonth": "explicit_august",
+        "candidateMonth": 8,
+        "candidateYear": 2026,
+        "candidateDate": "2026-08-28",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "black_outfits_sep29",
+      "title": "Nós dois de preto",
+      "mediaIds": [
+        "photo_black_outfits"
+      ],
+      "date": null,
+      "reportedDate": {
+        "day": 29,
+        "relativeMonth": "previous",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-29",
+        "status": "reported_relative_month",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "first_kiss",
+      "title": "Nosso primeiro beijo",
+      "mediaIds": [
+        "photo_first_kiss_memory"
+      ],
+      "date": "2026-09-19",
+      "reportedDate": {
+        "day": 19,
+        "relativeMonth": "explicit_september",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-19",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": "early_morning",
+        "exactTime": null
+      }
+    },
+    {
+      "id": "central_church_sep19",
+      "title": "À noite, fomos à Central",
+      "mediaIds": [
+        "photo_central_church"
+      ],
+      "date": "2026-09-19",
+      "reportedDate": {
+        "day": 19,
+        "relativeMonth": "previous",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-19",
+        "status": "reported_day_relative_month_resolved",
+        "period": "night",
+        "exactTime": null
+      }
+    },
+    {
+      "id": "care_sep20",
+      "title": "Pequenos cuidados",
+      "mediaIds": [
+        "photo_care_pimple"
+      ],
+      "date": "2026-09-20",
+      "reportedDate": {
+        "day": 20,
+        "relativeMonth": "previous",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-20",
+        "status": "reported_day_relative_month_resolved",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "bibo_sep23",
+      "title": "O Bibo de presente",
+      "mediaIds": [
+        "photo_bibo_gift"
+      ],
+      "date": "2026-09-23",
+      "reportedDate": {
+        "day": 23,
+        "relativeMonth": "previous",
+        "candidateMonth": 9,
+        "candidateYear": 2026,
+        "candidateDate": "2026-09-23",
+        "status": "reported_day_relative_month_resolved",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "faces_close_oct10",
+      "title": "Bem juntinhos",
+      "mediaIds": [
+        "photo_faces_close"
+      ],
+      "date": "2026-10-10",
+      "reportedDate": {
+        "day": 10,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-10",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": null,
+        "exactTime": null
+      },
+      "isPartOf": "first_face_masks",
+      "includeInTimeline": false
+    },
+    {
+      "id": "first_face_masks",
+      "title": "Nossa primeira máscara facial juntos",
+      "mediaIds": [
+        "photo_faces_close",
+        "video_1000567511",
+        "video_1000567513"
+      ],
+      "date": "2026-10-10",
+      "reportedDate": {
+        "day": 10,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-10",
+        "status": "day_and_month_confirmed_year_from_conversation",
+        "period": null,
+        "exactTime": null
+      },
+      "note": "Usuário confirmou que a foto dos rostos juntinhos e os dois vídeos de máscara são do mesmo dia, 10 de outubro.",
+      "includeInTimeline": true
+    },
+    {
+      "id": "rural_tongue",
+      "title": "Careta na roça",
+      "mediaIds": [
+        "photo_rural_tongue"
+      ],
+      "date": null,
+      "reportedDate": {
+        "day": null,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": null,
+        "status": "day_13_or_14_pending",
+        "period": null,
+        "exactTime": null
+      },
+      "candidateDayRange": [
+        13,
+        14
+      ]
+    },
+    {
+      "id": "rural_cake_oct14",
+      "title": "Um bolo e nós dois",
+      "mediaIds": [
+        "photo_rural_cake"
+      ],
+      "date": "2026-10-14",
+      "reportedDate": {
+        "day": 14,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-14",
+        "status": "reported_day_relative_month_resolved",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "rural_hand_oct15",
+      "title": "Dias na roça",
+      "mediaIds": [
+        "photo_rural_hand"
+      ],
+      "date": "2026-10-15",
+      "reportedDate": {
+        "day": 15,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-15",
+        "status": "reported_day_relative_month_resolved",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "rural_portrait",
+      "title": "Mais um registro nosso",
+      "mediaIds": [
+        "photo_rural_portrait"
+      ],
+      "date": null,
+      "reportedDate": {
+        "day": 16,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-16",
+        "status": "file_day_association_provisional",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "sunset_oct16",
+      "title": "Nossa foto no pôr do sol",
+      "mediaIds": [
+        "photo_golden_light"
+      ],
+      "date": "2026-10-16",
+      "reportedDate": {
+        "day": 16,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-16",
+        "status": "reported_day_relative_month_resolved",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "rural_fun",
+      "title": "Nossas caretas",
+      "mediaIds": [
+        "photo_rural_fun"
+      ],
+      "date": null,
+      "reportedDate": {
+        "day": 18,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-18",
+        "status": "file_day_association_provisional",
+        "period": null,
+        "exactTime": null
+      }
+    },
+    {
+      "id": "other_oct18",
+      "title": "Outro registro do dia 18",
+      "mediaIds": [],
+      "date": null,
+      "reportedDate": {
+        "day": 18,
+        "relativeMonth": "current",
+        "candidateMonth": 10,
+        "candidateYear": 2026,
+        "candidateDate": "2026-10-18",
+        "status": "photo_not_identified",
+        "period": null,
+        "exactTime": null
+      }
+    }
+  ],
+  "chronologyConflicts": [],
+  "ruralContext": {
+    "description": "Visita à roça do pai de Jemima, com fotos espontâneas de convivência.",
+    "month": 10,
+    "year": 2026,
+    "dayRangeReported": [
+      13,
+      18
+    ],
+    "note": "A data exata de algumas fotos e a ligação de cada arquivo ainda são provisórias."
+  },
+  "dateYearNote": "Ano 2026 adotado pelo contexto temporal desta conversa; o usuário confirmou expressamente os dias e meses.",
+  "timeline": [
+    "first_meeting",
+    "first_kiss",
+    "central_church_sep19",
+    "care_sep20",
+    "bibo_sep23",
+    "first_face_masks",
+    "rural_cake_oct14",
+    "rural_hand_oct15",
+    "sunset_oct16"
+  ],
+  "music": {
+    "title": "Totalmente Seu",
+    "artist": null,
+    "version": null,
+    "audioFile": null,
+    "sourceUrl": null,
+    "selectionSource": "Informado pelo usuário",
+    "playbackReady": false,
+    "note": "Falta identificar o artista/versão; não escolher uma gravação por suposição."
+  },
+  "counter": {
+    "startEventId": "first_meeting",
+    "startDate": "2026-08-28",
+    "startTime": null,
+    "timeZone": "America/Sao_Paulo",
+    "label": "Desde o nosso primeiro encontro",
+    "dateSource": "Data do primeiro encontro, escolhida pelo usuário para o contador",
+    "precision": "date",
+    "displayUnits": [
+      "years",
+      "months",
+      "days"
+    ],
+    "showHoursMinutesSeconds": false,
+    "note": "Horário não informado. Não apresentar uma hora inventada como a hora do encontro. Não tratar a data como início do namoro."
+  }
+}

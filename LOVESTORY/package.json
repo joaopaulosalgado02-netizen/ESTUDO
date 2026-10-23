@@ -1,0 +1,29 @@
+{
+  "name": "lovestory-album",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node scripts/browser-check.mjs",
+    "test:motion": "node scripts/motion-check.mjs",
+    "test:physical": "node scripts/physical-motion-check.mjs",
+    "test:music": "node scripts/music-check.mjs"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "26.1.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.4",
+    "@vitejs/plugin-react": "6.0.5",
+    "playwright-core": "1.56.1",
+    "typescript": "6.0.3",
+    "vite": "8.2.0"
+  }
+}
